@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Gallery - Dynasty 8</title>
+    <link rel="stylesheet" href="D8.css">
+
+    <!-- No Firebase needed for this static page -->
+
+    <script defer src="utility.js"></script>
+    <script defer src="interiors.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="logo-container">
+                <img src="d8-logo.png" alt="Dynasty 8 Logo">
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Time Clock</a>
+                <a href="interiors.html">Interiors</a>
+                <a href="ads.html">Ads</a>
+                <a href="manager.html">Leadership Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content-wrapper">
+        <header>
+            <img class="header-logo" src="d8-logo.png" alt="Dynasty 8 Header Logo">
+        </header>
+
+        <div class="content-block" style="max-width: 1200px;">
+            <h1>Interior Gallery</h1>
+            <!-- Gallery Grid -->
+            <div id="gallery-grid">
+                <!-- Interior items will be injected here by interiors.js -->
+                <p>Loading interiors...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

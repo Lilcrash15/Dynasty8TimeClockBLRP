@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty 8</title>
+    <link rel="stylesheet" href="D8.css">
+
+<!-- START: Firebase SDK and Configuration -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { 
+        getFirestore, collection, addDoc, getDocs, doc, updateDoc, 
+        query, where, orderBy, serverTimestamp, Timestamp, getDoc 
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
+      authDomain: "dynasty8-timeclock.firebaseapp.com",
+      projectId: "dynasty8-timeclock",
+      storageBucket: "dynasty8-timeclock.firebasestorage.app",
+      messagingSenderId: "671469314165",
+      appId: "1:671469314165:web:70aea0e31168f20a7c983c",
+      measurementId: "G-2Z5B0VKG7F"
+    };
+
+    try {
+        console.log("Attempting Firebase initialization for:", document.title);
+        const app = initializeApp(firebaseConfig);
+        window.db = getFirestore(app);
+        window.firestoreFunctions = {
+            collection, addDoc, getDocs, doc, updateDoc, query, where, orderBy,
+            serverTimestamp, Timestamp, 
+            getDoc // *** FIX: Added getDoc to the window.firestoreFunctions object ***
+        };
+        window.isFirebaseReady = true; 
+        console.log("Firebase initialized successfully for:", document.title);
+        const firebaseReadyEvent = new CustomEvent('firebaseReady', {
+            detail: { db: window.db, functions: window.firestoreFunctions }
+        });
+        document.dispatchEvent(firebaseReadyEvent);
+    } catch (error) {
+        window.isFirebaseReady = false; 
+        console.error("FATAL: Error initializing Firebase SDK on", document.title, ":", error);
+        const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
+        document.dispatchEvent(firebaseErrorEvent);
+    }
+</script>
+<!-- END: Firebase SDK and Configuration -->
+
+    <script defer src="utility.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading Time Clock...</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="logo-container">
+                <img src="d8-logo.png" alt="Dynasty 8 Logo">
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Time Clock</a>
+                <a href="interiors.html">Interiors</a>
+                <a href="ads.html">Ads</a>
+                <a href="manager.html">Leadership Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content-wrapper">
+        <header>
+            <img class="header-logo" src="d8-logo.png" alt="Dynasty 8 Header Logo">
+        </header>
+
+        <div id="employee-login-container" class="content-block" style="max-width: 450px;">
+            <h1>Employee Access</h1>
+            <form id="employee-login-form">
+                <div class="form-group">
+                    <label for="employee-password">Enter Access Password:</label>
+                    <input type="password" id="employee-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" class="error-message" style="display: none;">Invalid Password.</p>
+        </div>
+
+        <div id="employee-content" class="content-block" style="display: none; max-width: 800px;">
+            <h1>Time Clock</h1>
+            <div class="form-group">
+                <label for="employee-select">Select Your Name:</label>
+                <select id="employee-select">
+                    <option value="">-- Please Select --</option>
+                </select>
+            </div>
+
+            <div id="time-clock-interface" style="display: none;">
+                <div id="time-clock-status" class="status-box">
+                    You are currently clocked out.
+                </div>
+                <div id="time-clock-controls">
+                    <button id="clock-in-btn" class="action-button clock-in-btn" disabled>Clock In</button>
+                    <button id="clock-out-btn" class="action-button clock-out-btn" style="display: none;">Clock Out</button>
+                </div>
+                <p id="clock-out-message" class="success-message" style="display: none;"></p>
+                <hr>
+                <h2>Your Recent Time Entries</h2>
+                <div id="personal-log-display" class="log-container">
+                    <p><i>Select your name to see your recent entries.</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
