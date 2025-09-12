@@ -3,50 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynasty 8</title>
+    <title>Dynasty 8 Time Clock</title>
     <link rel="stylesheet" href="D8.css">
 
-<!-- START: Firebase SDK and Configuration -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { 
-        getFirestore, collection, addDoc, getDocs, doc, updateDoc, 
-        query, where, orderBy, serverTimestamp, Timestamp, getDoc 
-    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-    
-    const firebaseConfig = {
-      apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
-      authDomain: "dynasty8-timeclock.firebaseapp.com",
-      projectId: "dynasty8-timeclock",
-      storageBucket: "dynasty8-timeclock.firebasestorage.app",
-      messagingSenderId: "671469314165",
-      appId: "1:671469314165:web:70aea0e31168f20a7c983c",
-      measurementId: "G-2Z5B0VKG7F"
-    };
-
-    try {
-        console.log("Attempting Firebase initialization for:", document.title);
-        const app = initializeApp(firebaseConfig);
-        window.db = getFirestore(app);
-        window.firestoreFunctions = {
-            collection, addDoc, getDocs, doc, updateDoc, query, where, orderBy,
-            serverTimestamp, Timestamp, 
-            getDoc // *** FIX: Added getDoc to the window.firestoreFunctions object ***
+    <!-- START: Firebase SDK and Configuration -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { 
+            getFirestore, collection, addDoc, getDocs, doc, updateDoc, 
+            query, where, orderBy, serverTimestamp, Timestamp, getDoc 
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
+          authDomain: "dynasty8-timeclock.firebaseapp.com",
+          projectId: "dynasty8-timeclock",
+          storageBucket: "dynasty8-timeclock.firebasestorage.app",
+          messagingSenderId: "671469314165",
+          appId: "1:671469314165:web:70aea0e31168f20a7c983c",
+          measurementId: "G-2Z5B0VKG7F"
         };
-        window.isFirebaseReady = true; 
-        console.log("Firebase initialized successfully for:", document.title);
-        const firebaseReadyEvent = new CustomEvent('firebaseReady', {
-            detail: { db: window.db, functions: window.firestoreFunctions }
-        });
-        document.dispatchEvent(firebaseReadyEvent);
-    } catch (error) {
-        window.isFirebaseReady = false; 
-        console.error("FATAL: Error initializing Firebase SDK on", document.title, ":", error);
-        const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
-        document.dispatchEvent(firebaseErrorEvent);
-    }
-</script>
-<!-- END: Firebase SDK and Configuration -->
+
+        try {
+            console.log("Attempting Firebase initialization for:", document.title);
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            window.firestoreFunctions = {
+                collection, addDoc, getDocs, doc, updateDoc, query, where, orderBy,
+                serverTimestamp, Timestamp, getDoc
+            };
+            window.isFirebaseReady = true; 
+            console.log("Firebase initialized successfully for:", document.title);
+            const firebaseReadyEvent = new CustomEvent('firebaseReady', {
+                detail: { db: window.db, functions: window.firestoreFunctions }
+            });
+            document.dispatchEvent(firebaseReadyEvent);
+        } catch (error) {
+            window.isFirebaseReady = false; 
+            console.error("FATAL: Error initializing Firebase SDK on", document.title, ":", error);
+            const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
+            document.dispatchEvent(firebaseErrorEvent);
+        }
+    </script>
+    <!-- END: Firebase SDK and Configuration -->
 
     <script defer src="utility.js"></script>
     <script defer src="main.js"></script>
@@ -68,6 +67,7 @@
                 <a href="index.html">Time Clock</a>
                 <a href="interiors.html">Interiors</a>
                 <a href="ads.html">Ads</a>
+                <a href="sop.html">SOP Document</a>
                 <a href="manager.html">Leadership Portal</a>
             </div>
         </div>
@@ -79,42 +79,84 @@
         </header>
 
         <div id="employee-login-container" class="content-block" style="max-width: 450px;">
-            <h1>Employee Access</h1>
+            <h1>Employee Login</h1>
             <form id="employee-login-form">
                 <div class="form-group">
-                    <label for="employee-password">Enter Access Password:</label>
+                    <label for="login-employee-select">Select Your Name:</label>
+                    <select id="login-employee-select">
+                        <option value="">-- Loading Employees --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="employee-password">Enter Your Player ID:</label>
                     <input type="password" id="employee-password" required>
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <p id="login-error" class="error-message" style="display: none;">Invalid Password.</p>
+            <p id="login-error" class="error-message" style="display: none;">Invalid Player ID for the selected employee.</p>
         </div>
 
-        <div id="employee-content" class="content-block" style="display: none; max-width: 800px;">
-            <h1>Time Clock</h1>
-            <div class="form-group">
-                <label for="employee-select">Select Your Name:</label>
-                <select id="employee-select">
-                    <option value="">-- Please Select --</option>
-                </select>
-            </div>
+    <div id="employee-content" class="content-block" style="display: none; max-width: 800px;">
+    <h1>Time Clock</h1>
+    
+    <!-- This will display the logged-in user's name -->
+    <h2 id="welcome-message" style="display: none; color: #f0f0f0; border-bottom: none; margin-bottom: 20px;"></h2>
 
-            <div id="time-clock-interface" style="display: none;">
-                <div id="time-clock-status" class="status-box">
-                    You are currently clocked out.
+    <!-- This container will be hidden after login -->
+    <div id="employee-select-container" class="form-group">
+        <label for="employee-select">Select Your Name:</label>
+        <select id="employee-select">
+            <option value="">-- Please Select --</option>
+        </select>
+    </div>
+
+    <div id="time-clock-interface" style="display: none;">
+        <div id="time-clock-status" class="status-box">
+            You are currently clocked out.
+        </div>
+        <div id="time-clock-controls">
+            <button id="clock-in-btn" class="action-button clock-in-btn" disabled>Clock In</button>
+            <button id="clock-out-btn" class="action-button clock-out-btn" style="display: none;">Clock Out</button>
+        </div>
+        <p id="clock-out-message" class="success-message" style="display: none;"></p>
+        <hr>
+        <h2>Your Time Entries <small>(Current Week: Sun-Sat)</small></h2>
+        <div id="personal-log-display" class="log-container">
+            <p><i>Select your name to see your recent entries.</i></p>
+        </div>
+    </div>
+    
+    <div id="commission-calculator-section" class="content-block" style="margin-top: 30px; background-color: transparent; border: none; padding: 0;">
+        <div class="collapsible-header">
+            <h2>Processing Calculator</h2>
+            <button id="toggle-calculator-btn" class="action-button">Show</button>
+        </div>
+        <div id="calculator-content-wrapper">
+            <div class="calculator-grid">
+                <div class="calculator-box">
+                    <h3>Sell to State (65%)</h3>
+                    <div class="form-group">
+                        <label for="state-sale-input">House Value ($)</label>
+                        <input type="number" id="state-sale-input" placeholder="e.g., 500000">
+                    </div>
+                    <p class="result-display">Seller Deposit: <strong id="state-sale-result">$0.00</strong></p>
                 </div>
-                <div id="time-clock-controls">
-                    <button id="clock-in-btn" class="action-button clock-in-btn" disabled>Clock In</button>
-                    <button id="clock-out-btn" class="action-button clock-out-btn" style="display: none;">Clock Out</button>
+                <div class="calculator-box">
+                    <h3>Sell to Player (88%)</h3>
+                    <div class="form-group">
+                        <label for="player-sale-input">House Value ($)</label>
+                        <input type="number" id="player-sale-input" placeholder="e.g., 500000">
+                    </div>
+                    <p class="result-display">Seller Deposit: <strong id="player-sale-result">$0.00</strong></p>
                 </div>
-                <p id="clock-out-message" class="success-message" style="display: none;"></p>
-                <hr>
-                <h2>Your Recent Time Entries</h2>
-                <div id="personal-log-display" class="log-container">
-                    <p><i>Select your name to see your recent entries.</i></p>
-                </div>
+            </div>
+            <div class="calculator-actions">
+                <button id="clear-calc-btn" class="action-button clear-button">Clear Amounts</button>
             </div>
         </div>
     </div>
+</div>
+
+    </div> 
 </body>
 </html>

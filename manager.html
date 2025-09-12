@@ -6,45 +6,43 @@
     <title>Leadership Portal - Dynasty 8</title>
     <link rel="stylesheet" href="D8.css">
 
-<!-- START: Firebase SDK and Configuration -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-    
-    const firebaseConfig = {
-      apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
-      authDomain: "dynasty8-timeclock.firebaseapp.com",
-      projectId: "dynasty8-timeclock",
-      storageBucket: "dynasty8-timeclock.firebasestorage.app",
-      messagingSenderId: "671469314165",
-      appId: "1:671469314165:web:70aea0e31168f20a7c983c",
-      measurementId: "G-2Z5B0VKG7F"
-    };
-
-    try {
-        console.log("Attempting Firebase initialization for:", document.title);
-        const app = initializeApp(firebaseConfig);
-        window.db = getFirestore(app);
-        window.firestoreFunctions = {
-            collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy,
-            serverTimestamp, getDoc
+    <!-- START: Firebase SDK and Configuration -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
+          authDomain: "dynasty8-timeclock.firebaseapp.com",
+          projectId: "dynasty8-timeclock",
+          storageBucket: "dynasty8-timeclock.firebasestorage.app",
+          messagingSenderId: "671469314165",
+          appId: "1:671469314165:web:70aea0e31168f20a7c983c",
+          measurementId: "G-2Z5B0VKG7F"
         };
-        // *** FIX: Set the global flag to true ***
-        window.isFirebaseReady = true;
-        console.log("Firebase initialized successfully for:", document.title);
-        const firebaseReadyEvent = new CustomEvent('firebaseReady', {
-            detail: { db: window.db, functions: window.firestoreFunctions }
-        });
-        document.dispatchEvent(firebaseReadyEvent);
-    } catch (error) {
-        // *** FIX: Set the global flag to false on error ***
-        window.isFirebaseReady = false;
-        console.error("FATAL: Error initializing Firebase SDK on", document.title, ":", error);
-        const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
-        document.dispatchEvent(firebaseErrorEvent);
-    }
-</script>
-<!-- END: Firebase SDK and Configuration -->
+
+        try {
+            console.log("Attempting Firebase initialization for:", document.title);
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            window.firestoreFunctions = {
+                collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy,
+                serverTimestamp, getDoc, setDoc
+            };
+            window.isFirebaseReady = true;
+            console.log("Firebase initialized successfully for:", document.title);
+            const firebaseReadyEvent = new CustomEvent('firebaseReady', {
+                detail: { db: window.db, functions: window.firestoreFunctions }
+            });
+            document.dispatchEvent(firebaseReadyEvent);
+        } catch (error) {
+            window.isFirebaseReady = false;
+            console.error("FATAL: Error initializing Firebase SDK on", document.title, ":", error);
+            const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
+            document.dispatchEvent(firebaseErrorEvent);
+        }
+    </script>
+    <!-- END: Firebase SDK and Configuration -->
 
     <script defer src="utility.js"></script>
     <script defer src="manager.js"></script>
@@ -66,6 +64,7 @@
                 <a href="index.html">Time Clock</a>
                 <a href="interiors.html">Interiors</a>
                 <a href="ads.html">Ads</a>
+                <a href="sop.html">SOP Document</a>
                 <a href="manager.html">Leadership Portal</a>
             </div>
         </div>
@@ -116,6 +115,22 @@
                 <div id="employee-list" class="log-container">
                     <p><i>Loading employees...</i></p>
                 </div>
+            </div>
+
+            <div id="password-management-section" class="content-block">
+                <h2>Manage Shared Employee Password</h2>
+                <form id="shared-password-form">
+                    <div class="form-group">
+                        <label for="current-employee-password">Current Shared Password:</label>
+                        <input type="text" id="current-employee-password" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-employee-password">Set New Shared Password:</label>
+                        <input type="text" id="new-employee-password" placeholder="Enter new password (min. 6 characters)">
+                    </div>
+                    <button type="button" id="save-password-btn" class="action-button">Update Password</button>
+                </form>
+                <p id="password-status" class="success-message" style="display: none;"></p>
             </div>
 
             <div id="time-log-section" class="content-block">

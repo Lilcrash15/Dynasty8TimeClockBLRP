@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP Document - Dynasty 8</title>
+    <link rel="stylesheet" href="D8.css">
+
+    <!-- START: Firebase SDK and Configuration -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
+          authDomain: "dynasty8-timeclock.firebaseapp.com",
+          projectId: "dynasty8-timeclock",
+          storageBucket: "dynasty8-timeclock.firebasestorage.app",
+          messagingSenderId: "671469314165",
+          appId: "1:671469314165:web:70aea0e31168f20a7c983c",
+          measurementId: "G-2Z5B0VKG7F"
+        };
+
+        try {
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            window.firestoreFunctions = { doc, getDoc };
+            window.isFirebaseReady = true; 
+            const firebaseReadyEvent = new CustomEvent('firebaseReady', {
+                detail: { db: window.db, functions: window.firestoreFunctions }
+            });
+            document.dispatchEvent(firebaseReadyEvent);
+        } catch (error) {
+            window.isFirebaseReady = false; 
+            const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
+            document.dispatchEvent(firebaseErrorEvent);
+        }
+    </script>
+    <!-- END: Firebase SDK -->
+
+    <script defer src="utility.js"></script>
+    <script defer src="sop.js"></script>
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="logo-container">
+                <img src="d8-logo.png" alt="Dynasty 8 Logo">
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Time Clock</a>
+                <a href="interiors.html">Interiors</a>
+                <a href="ads.html">Ads</a>
+                <a href="sop.html">SOP Document</a>
+                <a href="manager.html">Leadership Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content-wrapper">
+        <header>
+            <img class="header-logo" src="d8-logo.png" alt="Dynasty 8 Header Logo">
+        </header>
+
+        <div id="sop-login-container" class="content-block" style="max-width: 450px;">
+            <h1>SOP Access</h1>
+            <p style="margin-bottom: 20px;">Please login first to view the SOP.</p>
+            <form id="sop-login-form">
+                <div class="form-group">
+                </div>
+            </form>
+            <p id="sop-login-error" class="error-message" style="display: none;">Invalid Password.</p>
+        </div>
+
+        <div id="sop-content" class="content-block" style="display: none; width: 100%; max-width: 1000px;">
+            <h2 id="sop-welcome-message" style="color: #f0f0f0; border-bottom: none; margin-bottom: 20px;"></h2>
+            <h1>Standard Operating Procedures</h1>
+            <div class="pdf-container">
+                <embed src="Dynasty8_SOP.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="800px" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
