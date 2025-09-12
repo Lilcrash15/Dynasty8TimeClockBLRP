@@ -22,7 +22,6 @@
         };
 
         try {
-            console.log("Attempting Firebase initialization for:", document.title);
             const app = initializeApp(firebaseConfig);
             window.db = getFirestore(app);
             window.firestoreFunctions = {
@@ -30,14 +29,10 @@
                 serverTimestamp, getDoc, setDoc
             };
             window.isFirebaseReady = true;
-            console.log("Firebase initialized successfully for:", document.title);
-            const firebaseReadyEvent = new CustomEvent('firebaseReady', {
-                detail: { db: window.db, functions: window.firestoreFunctions }
-            });
+            const firebaseReadyEvent = new CustomEvent('firebaseReady', { detail: { db: window.db, functions: window.firestoreFunctions } });
             document.dispatchEvent(firebaseReadyEvent);
         } catch (error) {
             window.isFirebaseReady = false;
-            console.error("FATAL: Error initializing Firebase SDK on", document.title, ":", error);
             const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
             document.dispatchEvent(firebaseErrorEvent);
         }
@@ -76,15 +71,21 @@
         </header>
 
         <div id="manager-login-container" class="content-block" style="max-width: 450px;">
-            <h1>Manager Access</h1>
+            <h1>Leadership Login</h1>
             <form id="manager-login-form">
                 <div class="form-group">
-                    <label for="manager-password">Enter Manager Password:</label>
+                    <label for="manager-employee-select">Select Your Name:</label>
+                    <select id="manager-employee-select">
+                        <option value="">-- Loading Leadership --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="manager-password">Enter Your Player ID:</label>
                     <input type="password" id="manager-password" required>
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <p id="manager-login-error" class="error-message" style="display: none;">Invalid Manager Password.</p>
+            <p id="manager-login-error" class="error-message" style="display: none;">Invalid Player ID or not authorized.</p>
         </div>
 
         <div id="manager-content" style="display: none; width: 100%; max-width: 1100px;">
@@ -98,12 +99,20 @@
                         <input type="text" id="employee-name" placeholder="John Doe" required>
                     </div>
                     <div class="form-group">
-                        <label for="employee-ssn">SSN (Player ID):</label>
+                        <label for="employee-ssn">SSN / Player ID (Acts as Password):</label>
                         <input type="text" id="employee-ssn" placeholder="e.g., 123456" required>
                     </div>
                     <div class="form-group checkbox-group">
                         <input type="checkbox" id="employee-warehouses">
                         <label for="employee-warehouses">Can do warehouses?</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="employee-active" checked>
+                        <label for="employee-active">Is Active?</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="employee-leadership">
+                        <label for="employee-leadership">Has Leadership Access?</label>
                     </div>
                     <div class="form-buttons">
                         <button type="button" id="save-employee-btn" class="action-button">Add Employee</button>
@@ -117,22 +126,6 @@
                 </div>
             </div>
 
-            <div id="password-management-section" class="content-block">
-                <h2>Manage Shared Employee Password</h2>
-                <form id="shared-password-form">
-                    <div class="form-group">
-                        <label for="current-employee-password">Current Shared Password:</label>
-                        <input type="text" id="current-employee-password" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="new-employee-password">Set New Shared Password:</label>
-                        <input type="text" id="new-employee-password" placeholder="Enter new password (min. 6 characters)">
-                    </div>
-                    <button type="button" id="save-password-btn" class="action-button">Update Password</button>
-                </form>
-                <p id="password-status" class="success-message" style="display: none;"></p>
-            </div>
-
             <div id="time-log-section" class="content-block">
                 <h2>All Employee Time Logs</h2>
                 <button id="export-logs-btn" class="action-button" style="margin-bottom: 20px;">Export All to CSV</button>
@@ -140,6 +133,14 @@
                     <p><i>Loading time logs...</i></p>
                 </div>
             </div>
+
+            <div id="leadership-activity-section" class="content-block">
+                <h2>Leadership Activity Log</h2>
+                <div id="leadership-log-display" class="log-container">
+                    <p><i>Loading activity logs...</i></p>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>

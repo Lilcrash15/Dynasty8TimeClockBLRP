@@ -55,7 +55,9 @@ form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margi
 .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
 .form-group input[type="text"], .form-group input[type="password"], .form-group select { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #555; background-color: #1a1a1d; color: #f0f0f0; font-size: 1rem; }
 .checkbox-group { display: flex; align-items: center; justify-content: flex-start; gap: 10px; }
-.checkbox-group input[type="checkbox"] { width: 20px; height: 20px; accent-color: #c3923e; }
+.checkbox-group:hover label {color: #4a90e2; cursor: pointer;}
+.checkbox-group input[type="checkbox"] {cursor: pointer;}
+.checkbox-group input[type="checkbox"] { width: 20px; height: 20px; accent-color: #27ae60; }
 .form-buttons { display: flex; gap: 10px; justify-content: flex-start; margin-top: 10px; }
 .error-message { color: #e74c3c; font-weight: bold; margin-top: 15px; }
 .success-message { color: #2ecc71; font-weight: bold; margin-top: 15px; }
@@ -307,4 +309,146 @@ input[type=number] {
     border-radius: 8px;
     overflow: hidden; /* Ensures the embed tag respects the border radius */
     margin-top: 20px;
+}
+
+#employee-select,
+#manager-employee-select,
+#login-employee-select {
+    text-align: center;
+    text-align-last: center; /* Improves consistency on some browsers */
+}
+/* ADD THIS CSS to the end of your style.css file */
+
+/* === Interior Gallery Page (List Format) === */
+
+#filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.filter-btn { background-color: #3a3a3d; color: #f0f0f0; }
+.filter-btn.active { background-color: #4a90e2; color: #1a1a1d; }
+
+.interior-category {
+    margin-bottom: 40px;
+}
+.interior-category h2 {
+    text-align: left;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.interior-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+    gap: 20px;
+}
+
+.interior-item {
+    background-color: #2d2d30;
+    border: 1px solid #444;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    transition: background-color 0.2s;
+    min-width: 0; 
+}
+.interior-item:hover {
+    background-color: #3a3a3d;
+}
+
+.interior-preview {
+    flex-shrink: 0;
+}
+.preview-image {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #555;
+}
+
+.interior-details {
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+    min-width: 0; 
+}
+.interior-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    white-space: nowrap;     
+    overflow: hidden;        
+    text-overflow: ellipsis;  
+    display: block;           
+}
+.interior-note {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.copy-link {
+    background-color: #1a1a1d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #555;
+    transition: background-color 0.2s;
+    flex-shrink: 0;    
+    white-space: nowrap;  
+}
+.copy-link:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+.copy-link input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+}
+
+/* === Lightbox Styles === */
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10010;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+#lightbox-close:hover {
+    color: #ccc;
 }
