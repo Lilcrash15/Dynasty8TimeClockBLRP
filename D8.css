@@ -20,7 +20,7 @@ body {
     width: 100%;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 120px 20px 40px;
+    padding: 90px 20px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -400,7 +400,7 @@ th {
 tr:nth-child(even) {
     background-color: rgba(60, 60, 63, 0.3);
 }
-#employee-list .employee-item {
+.employee-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -413,10 +413,14 @@ tr:nth-child(even) {
 #employee-list .employee-details {
     text-align: left;
 }
-#employee-list .employee-actions button {
+
+.employee-actions button {
     font-size: 0.8rem;
     padding: 5px 10px;
-    margin-left: 8px;
+}
+
+.employee-actions button + button {
+    margin-left: 10px;
 }
 
 /* --- Collapsible Calculator --- */
@@ -444,7 +448,7 @@ tr:nth-child(even) {
     border-top: none;
 }
 #calculator-content-wrapper.open {
-    max-height: 500px;
+    max-height: 1500px;
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #444;
@@ -672,4 +676,107 @@ input[type=number] {
 }
 #lightbox-close:hover {
     color: #ccc;
+}
+/* === Contact Us Page Styles === */
+
+#contact-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background-color: #2d2d30;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    /* Added for the hover effect */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); /* Lifts the card up slightly */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.contact-card-left {
+    flex-basis: 120px;
+    flex-shrink: 0;
+    text-align: center;
+}
+.contact-profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a90e2;
+    margin-bottom: 10px;
+}
+.contact-name {
+    margin: 0;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0;
+}
+.contact-phone {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.contact-card-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-business-card {
+    max-width: 250px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer; /* Makes the card look clickable */
+}
+
+/* This targets the copy button on this page specifically */
+.contact-card-right .copy-link {
+    width: 75%;          /* Makes the button narrower */
+    max-width: 200px;    /* Prevents it from getting too wide */
+    margin: 0 auto;      /* Centers the button horizontally */
+}
+
+/* --- Manager Form Section Titles --- */
+
+.form-section-title {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #4a90e2;
+}
+
+.form-note {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.calculator-flyer-container {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #444;
+}
+
+.calculator-flyer-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 0 auto;
 }

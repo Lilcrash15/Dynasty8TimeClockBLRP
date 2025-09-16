@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dynasty 8</title>
+    <link rel="stylesheet" href="D8.css">
+
+<!-- START: Firebase SDK and Configuration -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, getDocs, query, where, orderBy } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    
+    const firebaseConfig = { apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30", authDomain: "dynasty8-timeclock.firebaseapp.com", projectId: "dynasty8-timeclock", storageBucket: "dynasty8-timeclock.firebasestorage.app", messagingSenderId: "671469314165", appId: "1:671469314165:web:70aea0e31168f20a7c983c", measurementId: "G-2Z5B0VKG7F" };
+
+    try {
+        const app = initializeApp(firebaseConfig);
+        window.db = getFirestore(app);
+        window.firestoreFunctions = { collection, getDocs, query, where, orderBy };
+        window.isFirebaseReady = true; 
+        const firebaseReadyEvent = new CustomEvent('firebaseReady', { detail: { db: window.db, functions: window.firestoreFunctions } });
+        document.dispatchEvent(firebaseReadyEvent);
+    } catch (error) {
+        window.isFirebaseReady = false; 
+        const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
+        document.dispatchEvent(firebaseErrorEvent);
+    }
+</script>
+
+<!-- END: Firebase SDK and Configuration -->
+
+    <script defer src="utility.js"></script>
+    <script defer src="contact.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="logo-container">
+                <img src="d8-logo.png" alt="Dynasty 8 Logo">
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Time Clock</a>
+                <a href="manager.html">Leadership Portal</a>
+                <a href="interiors.html">Interior Gallery</a>
+                <a href="sop.html">SOP Document</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content-wrapper">
+        <header>
+            <img class="header-logo" src="d8-logo.png" alt="Dynasty 8 Header Logo">
+        </header>
+
+        <div class="content-block" style="max-width: 1200px;">
+            <h1>Our Team</h1>
+            <div id="contact-card-grid">
+                <p>Loading contacts...</p>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <div id="lightbox-overlay">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-image" src="" alt="Enlarged View">
+    </div>
+
+    
+    <footer>
+        <div><small>Website designed by Preston Stone / Lilcrash15.<br>Website to be used by Dynasty 8 employees on BLRP only.</small></div>
+    </footer>
+</body>
+</html>

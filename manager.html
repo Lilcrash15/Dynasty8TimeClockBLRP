@@ -5,51 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leadership Portal - Dynasty 8</title>
     <link rel="stylesheet" href="D8.css">
-
-    <!-- START: Firebase SDK and Configuration -->
+    <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
         import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-        
-        const firebaseConfig = {
-          apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
-          authDomain: "dynasty8-timeclock.firebaseapp.com",
-          projectId: "dynasty8-timeclock",
-          storageBucket: "dynasty8-timeclock.firebasestorage.app",
-          messagingSenderId: "671469314165",
-          appId: "1:671469314165:web:70aea0e31168f20a7c983c",
-          measurementId: "G-2Z5B0VKG7F"
-        };
-
+        const firebaseConfig = { apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30", authDomain: "dynasty8-timeclock.firebaseapp.com", projectId: "dynasty8-timeclock", storageBucket: "dynasty8-timeclock.firebasestorage.app", messagingSenderId: "671469314165", appId: "1:671469314165:web:70aea0e31168f20a7c983c", measurementId: "G-2Z5B0VKG7F" };
         try {
-            const app = initializeApp(firebaseConfig);
-            window.db = getFirestore(app);
-            window.firestoreFunctions = {
-                collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy,
-                serverTimestamp, getDoc, setDoc
-            };
-            window.isFirebaseReady = true;
-            const firebaseReadyEvent = new CustomEvent('firebaseReady', { detail: { db: window.db, functions: window.firestoreFunctions } });
-            document.dispatchEvent(firebaseReadyEvent);
+            const app = initializeApp(firebaseConfig); window.db = getFirestore(app);
+            window.firestoreFunctions = { collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp, getDoc, setDoc };
+            window.isFirebaseReady = true; const firebaseReadyEvent = new CustomEvent('firebaseReady', { detail: { db: window.db, functions: window.firestoreFunctions } }); document.dispatchEvent(firebaseReadyEvent);
         } catch (error) {
-            window.isFirebaseReady = false;
-            const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } });
-            document.dispatchEvent(firebaseErrorEvent);
+            window.isFirebaseReady = false; const firebaseErrorEvent = new CustomEvent('firebaseError', { detail: { error: error } }); document.dispatchEvent(firebaseErrorEvent);
         }
     </script>
-    <!-- END: Firebase SDK and Configuration -->
-
     <script defer src="utility.js"></script>
     <script defer src="manager.js"></script>
 </head>
 <body>
     <div id="loading-overlay">
-        <div class="loading-content">
-            <div class="spinner"></div>
-            <p>Loading Leadership Portal...</p>
-        </div>
+        <div class="loading-content"><div class="spinner"></div><p>Loading Leadership Portal...</p></div>
     </div>
-
     <div class="navbar">
         <div class="dropdown">
             <button class="logo-container">
@@ -57,99 +32,65 @@
             </button>
             <div class="dropdown-content">
                 <a href="index.html">Time Clock</a>
-                <a href="interiors.html">Interiors</a>
-                <a href="ads.html">Ads</a>
-                <a href="sop.html">SOP Document</a>
                 <a href="manager.html">Leadership Portal</a>
+                <a href="interiors.html">Interior Gallery</a>
+                <a href="sop.html">SOP Document</a>
+                <a href="contact.html">Contact Us</a>
             </div>
         </div>
     </div>
-
     <div class="page-content-wrapper">
-        <header>
-            <img class="header-logo" src="d8-logo.png" alt="Dynasty 8 Header Logo">
-        </header>
-
-        <div id="manager-login-container" class="content-block" style="max-width: 450px;">
+        <header><img class="header-logo" src="d8-logo.png" alt="Dynasty 8 Header Logo"></header>
+        <div id="manager-login-container" class="content-block">
             <h1>Leadership Login</h1>
             <form id="manager-login-form">
-                <div class="form-group">
-                    <label for="manager-employee-select">Select Your Name:</label>
-                    <select id="manager-employee-select">
-                        <option value="">-- Loading Leadership --</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="manager-password">Enter Your Player ID:</label>
-                    <input type="password" id="manager-password" required>
-                </div>
+                <div class="form-group"><label for="manager-employee-select">Select Your Name:</label><select id="manager-employee-select"><option value="">-- Loading Leadership --</option></select></div>
+                <div class="form-group"><label for="manager-password">Enter Your Player ID:</label><input type="password" id="manager-password" required></div>
                 <button type="submit">Login</button>
             </form>
-            <p id="manager-login-error" class="error-message" style="display: none;">Invalid Player ID or not authorized.</p>
+            <p id="manager-login-error" class="error-message"></p>
         </div>
-
-        <div id="manager-content" style="display: none; width: 100%; max-width: 1100px;">
+        <div id="manager-content" class="content-block">
             <div id="employee-management-section" class="content-block">
-                <h2>Manage Employees</h2>
+                <h2>Manage Employees & Contacts</h2>
                 <form id="employee-form">
                     <h3 id="employee-form-title">Add New Employee</h3>
                     <input type="hidden" id="edit-employee-id">
-                    <div class="form-group">
-                        <label for="employee-name">Full Name:</label>
-                        <input type="text" id="employee-name" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="employee-ssn">SSN / Player ID (Acts as Password):</label>
-                        <input type="text" id="employee-ssn" placeholder="e.g., 123456" required>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="employee-warehouses">
-                        <label for="employee-warehouses">Can do warehouses?</label>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="employee-active" checked>
-                        <label for="employee-active">Is Active?</label>
-                    </div>
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="employee-leadership">
-                        <label for="employee-leadership">Has Leadership Access?</label>
-                    </div>
+                    <div class="form-group"><label for="employee-name">Full Name:</label><input type="text" id="employee-name" placeholder="John Doe" required></div>
+                    <div class="form-group"><label for="employee-ssn">SSN / Player ID (Acts as Password):</label><input type="text" id="employee-ssn" placeholder="e.g., 123456" required></div>
+                    
+                    <hr>
+                    <h3 class="form-section-title">Realtor Contact Info (Business Cards)</h3>
+                    <p class="form-note">Fill these out to make this employee appear on the "Contact Us" page.</p>
+                    <div class="form-group"><label for="contact-phone">Public Phone Number:</label><input type="text" id="contact-phone" placeholder="123-456-7890"></div>
+                    <div class="form-group"><label for="contact-profile-pic">Profile Picture Link:</label><input type="text" id="contact-profile-pic" placeholder="https://i.gyazo.com/..."></div>
+                    <div class="form-group"><label for="contact-business-card">Business Card Link:</label><input type="text" id="contact-business-card" placeholder="https://i.gyazo.com/..."></div>
+                    <hr>
+                    
+                    <h3 class="form-section-title">Permissions</h3>
+                    <div class="form-group checkbox-group"><input type="checkbox" id="employee-active" checked><label for="employee-active">Is Active? (Can use Time Clock)</label></div>
+                    <div class="form-group checkbox-group"><input type="checkbox" id="employee-warehouses"><label for="employee-warehouses">Can do warehouses?</label></div>
+                    <div class="form-group checkbox-group"><input type="checkbox" id="employee-leadership"><label for="employee-leadership">Has Leadership Access?</label></div>
+                    
                     <div class="form-buttons">
                         <button type="button" id="save-employee-btn" class="action-button">Add Employee</button>
-                        <button type="button" id="cancel-edit-btn" class="action-button clear-button" style="display:none;">Cancel Edit</button>
+                        <button type="button" id="cancel-edit-btn" class="action-button clear-button">Cancel Edit</button>
                     </div>
                 </form>
                 <hr>
-                <h3>Current Employees</h3>
-                <div id="employee-list" class="log-container">
-                    <p><i>Loading employees...</i></p>
-                </div>
+                <h3>Current Roster</h3>
+                <div id="employee-list" class="log-container"><p><i>Loading employees...</i></p></div>
             </div>
-
             <div id="time-log-section" class="content-block">
                 <h2>All Employee Time Logs</h2>
-                <button id="export-logs-btn" class="action-button" style="margin-bottom: 20px;">Export All to CSV</button>
-                <div id="time-log-display" class="log-container">
-                    <p><i>Loading time logs...</i></p>
-                </div>
+                <button id="export-logs-btn" class="action-button">Export All to CSV</button>
+                <div id="time-log-display" class="log-container"><p><i>Loading time logs...</i></p></div>
             </div>
-
             <div id="leadership-activity-section" class="content-block">
                 <h2>Leadership Activity Log</h2>
-                <div id="leadership-log-display" class="log-container">
-                    <p><i>Loading activity logs...</i></p>
-                </div>
+                <div id="leadership-log-display" class="log-container"><p><i>Loading activity logs...</i></p></div>
             </div>
-
         </div>
     </div>
 </body>
-<footer>
-    <div style="text-align: center; margin-top: 40px;">
-      <small style="font-size: 1rem; font-weight: bold; color: white; text-shadow: 1px 1px 2px black, -1px -1px 2px black;">
-        Website designed by Preston Stone / Lilcrash15.<br>
-        Website to be used by Dynasty 8 employees on BLRP only.
-      </small>
-    </div>
-</footer>
 </html>
