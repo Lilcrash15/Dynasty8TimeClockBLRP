@@ -12,7 +12,7 @@
     import { getFirestore, collection, getDocs, query, where, orderBy } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
     
     const firebaseConfig = { apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30", authDomain: "dynasty8-timeclock.firebaseapp.com", projectId: "dynasty8-timeclock", storageBucket: "dynasty8-timeclock.firebasestorage.app", messagingSenderId: "671469314165", appId: "1:671469314165:web:70aea0e31168f20a7c983c", measurementId: "G-2Z5B0VKG7F" };
-
+    
     try {
         const app = initializeApp(firebaseConfig);
         window.db = getFirestore(app);
@@ -26,7 +26,6 @@
         document.dispatchEvent(firebaseErrorEvent);
     }
 </script>
-
 <!-- END: Firebase SDK and Configuration -->
 
     <script defer src="utility.js"></script>
