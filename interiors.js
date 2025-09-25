@@ -1,1 +1,189 @@
-function _0x5427(_0x2c797c,_0x8f71b6){const _0x202c39=_0x202c();return _0x5427=function(_0x5427fd,_0x142f02){_0x5427fd=_0x5427fd-0xf7;let _0x1c77e7=_0x202c39[_0x5427fd];return _0x1c77e7;},_0x5427(_0x2c797c,_0x8f71b6);}function _0x202c(){const _0x107e22=['\x22\x20class=\x22flyer-image\x22\x20loading=\x22lazy\x22\x20title=\x22Click\x20to\x20enlarge\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>','.filter-btn','ECLIPSE','SAVOY','copy','House\x20Interiors\x20(600k+)','MONET','Warehouses','querySelector','https://r2.fivemanage.com/image/EVYHbdTblF21.png','block','9691PCSKrt','src','div','366573MSXVrz','</small>','https://r2.fivemanage.com/image/U2owXIRlu7l4.png','Premium\x20Mansion\x20Interiors','SUBTERRA','BEACH','.content-block','$20K\x20Fee','https://r2.fivemanage.com/image/3zmhO8ibrjny.png','1739335YDpfCo','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22interior-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22interior-preview\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','https://r2.fivemanage.com/image/PnTRStaSNRTE.png','Master\x20Premium\x20Mansions\x20Interiors','display','Trailer\x20Interiors','all','https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/8.png','category','innerHTML','click','</div>','$7K\x20Fee','Master\x20Apartment\x20Interiors','\x22\x20alt=\x22','https://r2.fivemanage.com/image/vt0vrFWGt48G.png','JAMES','appendChild','https://r2.fivemanage.com/image/Eact22zPXMS6.png','https://r2.fivemanage.com/image/XLVcczphFWuu.png','style','https://r2.fivemanage.com/image/bAUCikzX7QzF.png','interior-category','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Copy\x20Link</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','4yzJsnM','closest','apartment','$5K\x20Fee','createElement','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22flyer-preview\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','https://r2.fivemanage.com/image/XbKJ96HhhKXc.png','house','122504KNfrYI','target','Inglewood','none','warehouse','<small\x20class=\x22interior-note\x22>','Warehouse\x20Interiors','https://r2.fivemanage.com/image/qgHf4UchMEdS.png','Hawthorne','VILLA','SOPOR','</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22copy-link\x22\x20title=\x22Click\x20to\x20copy\x20link\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20value=\x22','link','BUNGALOW','3273666ZZXWcv','name','$10K\x20Fee','interiors-list-container','https://static.vecteezy.com/system/resources/thumbnails/003/582/701/small_2x/coming-soon-background-illustration-template-design-free-vector.jpg','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Copy\x20Link</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','https://r2.fivemanage.com/image/sAXTIFK6hZpw.png','className','https://r2.fivemanage.com/image/dGX4XpTEE5l9.png','getElementById','https://r2.fivemanage.com/image/ZOb4shuIe7GZ.png','https://r2.fivemanage.com/image/AZovjdudUUsj.png','https://r2.fivemanage.com/image/8In3guaF8yAV.png','Dynasty\x208\x20Realtor','https://r2.fivemanage.com/image/Dh7wCYUuil8q.png','$500K\x20Fee','$750K\x20Fee','dataset','contains','CLINTON','filter','DOMContentLoaded','https://r2.fivemanage.com/image/U0r9clNOQkC7.png','remove','execCommand','18470xKPwuE','\x22\x20class=\x22preview-image\x22\x20loading=\x22lazy\x22\x20title=\x22Click\x20to\x20enlarge\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22interior-details\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22interior-name\x22>','https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/6.png','RETRO','note','title','flyer-item','textContent','https://r2.fivemanage.com/image/Yyixf8fYXkPV.png','Jasmine','$750\x20Fee','.flyer-item[style*=\x22display:\x20flex\x22]','Master\x20House\x20Interiors','input','mansion','2xTFEeu','addEventListener','https://r2.fivemanage.com/image/VGxsIVVtZU92.png','TINSEL','18YcfMnW','3114013zQjNMb','flex','AQUATIC','$13K\x20Fee','active','<h2>','https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/Mansions.png','Master\x20Trailer\x20Interiors','https://r2.fivemanage.com/image/FmXB0lraeo2h.png','querySelectorAll','classList','2583448TqYtPz','trailer','lightbox-close','forEach','.interior-category','https://r2.fivemanage.com/image/xv3eb3GLyDwM.png','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'];_0x202c=function(){return _0x107e22;};return _0x202c();}const _0x4bfc1a=_0x5427;(function(_0x10aaf0,_0x51f912){const _0xefe7b0=_0x5427,_0x19aa6d=_0x10aaf0();while(!![]){try{const _0x4d68bd=parseInt(_0xefe7b0(0x11e))/0x1+-parseInt(_0xefe7b0(0x154))/0x2*(parseInt(_0xefe7b0(0x179))/0x3)+parseInt(_0xefe7b0(0x116))/0x4*(parseInt(_0xefe7b0(0xfe))/0x5)+parseInt(_0xefe7b0(0x12c))/0x6+parseInt(_0xefe7b0(0x159))/0x7+parseInt(_0xefe7b0(0x164))/0x8*(parseInt(_0xefe7b0(0x158))/0x9)+-parseInt(_0xefe7b0(0x145))/0xa*(parseInt(_0xefe7b0(0x176))/0xb);if(_0x4d68bd===_0x51f912)break;else _0x19aa6d['push'](_0x19aa6d['shift']());}catch(_0xe4b5bf){_0x19aa6d['push'](_0x19aa6d['shift']());}}}(_0x202c,0x573b9),document[_0x4bfc1a(0x155)](_0x4bfc1a(0x141),()=>{const _0x314f49=_0x4bfc1a,_0x2476da={'trailer':[{'name':'BEACH','link':_0x314f49(0x13a),'note':'$10K\x20Fee'},{'name':_0x314f49(0x10e),'link':_0x314f49(0x136),'note':_0x314f49(0x12e)},{'name':'SANDY','link':'https://r2.fivemanage.com/image/lVpHgPm0Bs96.png','note':_0x314f49(0x10a)},{'name':_0x314f49(0x128),'link':'https://r2.fivemanage.com/image/Eact22zPXMS6.png','note':'$10K\x20Fee\x20(Trailer\x20MUST\x20be\x20grounded\x20&\x20a\x20double\x20wide)'}],'apartment':[{'name':'ALTA','link':_0x314f49(0x14d),'note':'$10K\x20Fee'},{'name':_0x314f49(0xfa),'link':_0x314f49(0x13a),'note':_0x314f49(0x12e)},{'name':'CYPRESS','link':_0x314f49(0xf7),'note':_0x314f49(0x12e)},{'name':'FRESCO','link':_0x314f49(0x169),'note':'$10K\x20Fee'},{'name':'GULF','link':_0x314f49(0x111),'note':'$10K\x20Fee'},{'name':_0x314f49(0x10e),'link':_0x314f49(0x136),'note':'$10K\x20Fee'},{'name':_0x314f49(0x171),'link':_0x314f49(0x113),'note':_0x314f49(0x12e)},{'name':_0x314f49(0x148),'link':'https://r2.fivemanage.com/image/3zmhO8ibrjny.png','note':_0x314f49(0x12e)}],'house':[{'name':_0x314f49(0x15b),'link':_0x314f49(0x137),'note':_0x314f49(0x15c)},{'name':'AVENGER','link':'https://r2.fivemanage.com/image/nvYqgUePs2s6.png','note':_0x314f49(0x15c)},{'name':_0x314f49(0x12b),'link':'https://r2.fivemanage.com/image/3mL4NrY2ry0Q.png','note':_0x314f49(0x15c)},{'name':_0x314f49(0x13f),'link':_0x314f49(0x132),'note':_0x314f49(0x119)},{'name':'JAMES','link':_0x314f49(0x136),'note':_0x314f49(0x12e)},{'name':_0x314f49(0x148),'link':_0x314f49(0xfd),'note':_0x314f49(0x12e)},{'name':_0x314f49(0x128),'link':_0x314f49(0x110),'note':_0x314f49(0x12e)},{'name':_0x314f49(0xf9),'link':_0x314f49(0x138),'note':_0x314f49(0x15c)},{'name':'TERRA-COTTA','link':'https://r2.fivemanage.com/image/VBsdm1EYucR3.png','note':_0x314f49(0x15c)}],'house-plus':[{'name':_0x314f49(0x16e),'link':_0x314f49(0x10d),'note':'$20K\x20Fee'},{'name':_0x314f49(0x127),'link':_0x314f49(0x156),'note':_0x314f49(0xfc)}],'mansion':[{'name':_0x314f49(0x16d),'link':_0x314f49(0x125),'note':'$20K\x20Fee'},{'name':'RANCHER','link':_0x314f49(0x161),'note':'$20K\x20Fee'},{'name':_0x314f49(0x16e),'link':_0x314f49(0x10d),'note':_0x314f49(0xfc)},{'name':_0x314f49(0x157),'link':_0x314f49(0x11c),'note':_0x314f49(0xfc)},{'name':_0x314f49(0x127),'link':'https://r2.fivemanage.com/image/VGxsIVVtZU92.png','note':_0x314f49(0xfc)}],'premiumMansions':[{'name':_0x314f49(0x126),'note':_0x314f49(0x13b),'link':_0x314f49(0x147)},{'name':_0x314f49(0x120),'note':_0x314f49(0x13c),'link':_0x314f49(0x15f)},{'name':_0x314f49(0x14e),'note':_0x314f49(0x14f),'link':_0x314f49(0x105)}],'warehouse':[{'name':_0x314f49(0x172),'link':_0x314f49(0x100)}]},_0x20cacf=[{'title':_0x314f49(0x160),'link':_0x314f49(0x174),'category':_0x314f49(0x165)},{'title':_0x314f49(0x10b),'link':_0x314f49(0x134),'category':_0x314f49(0x118)},{'title':_0x314f49(0x151),'link':'https://r2.fivemanage.com/image/HRMqPtywCW4D.png','category':_0x314f49(0x11d)},{'title':'Master\x20Mansion\x20Interiors','link':_0x314f49(0x142),'category':_0x314f49(0x153)},{'title':_0x314f49(0x101),'link':_0x314f49(0x130),'category':'Mansions'},{'title':_0x314f49(0x172),'link':_0x314f49(0x100),'category':_0x314f49(0x122)},{'title':_0x314f49(0x139),'link':'https://i.gyazo.com/adeeb65f716270b431076b7be024320d.png\x20'}],_0x20f949=document[_0x314f49(0x135)](_0x314f49(0x12f)),_0x1c8041=document['getElementById']('flyers-container'),_0x1ddb67=document[_0x314f49(0x162)](_0x314f49(0x16c)),_0x168335=document[_0x314f49(0x135)]('lightbox-overlay'),_0x22a406=document['getElementById']('lightbox-image'),_0x5bcf2a=document['getElementById'](_0x314f49(0x166)),_0x3420f0=document[_0x314f49(0x173)](_0x314f49(0xfb));function _0x3fac87(){const _0xd7d841=_0x314f49;_0x20f949[_0xd7d841(0x107)]='';for(const _0x4a6143 in _0x2476da){const _0x36cbfd=_0x2476da[_0x4a6143],_0x7dadb=document[_0xd7d841(0x11a)]('div');_0x7dadb[_0xd7d841(0x133)]=_0xd7d841(0x114),_0x7dadb[_0xd7d841(0x13d)][_0xd7d841(0x106)]=_0x4a6143;const _0x213ca0={'trailer':_0xd7d841(0x103),'apartment':'Apartment\x20Interiors','house':'House\x20Interiors','house-plus':_0xd7d841(0x170),'mansion':'Mansion\x20Interiors','premiumMansions':_0xd7d841(0xf8),'warehouse':_0xd7d841(0x124)}[_0x4a6143];let _0x39b4cb=_0xd7d841(0x15e)+_0x213ca0+'</h2><div\x20class=\x22interior-grid\x22>';_0x36cbfd[_0xd7d841(0x167)](_0x3a9407=>{const _0x5414a0=_0xd7d841,_0xe97949=_0x3a9407['note']?_0x5414a0(0x123)+_0x3a9407[_0x5414a0(0x149)]+_0x5414a0(0x17a):'';_0x39b4cb+=_0x5414a0(0xff)+_0x3a9407[_0x5414a0(0x12a)]+_0x5414a0(0x10c)+_0x3a9407['name']+_0x5414a0(0x146)+_0x3a9407[_0x5414a0(0x12d)]+_0x5414a0(0x16a)+_0xe97949+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22copy-link\x22\x20title=\x22Click\x20to\x20copy\x20link\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20value=\x22'+_0x3a9407[_0x5414a0(0x12a)]+_0x5414a0(0x115);}),_0x39b4cb+=_0xd7d841(0x109),_0x7dadb[_0xd7d841(0x107)]=_0x39b4cb,_0x20f949[_0xd7d841(0x10f)](_0x7dadb);}}function _0x1eab1e(){const _0x3fc347=_0x314f49;if(!_0x1c8041)return;_0x1c8041[_0x3fc347(0x107)]='',_0x20cacf['forEach'](_0x36dd7d=>{const _0x4b75d1=_0x3fc347,_0x1e4b58=document[_0x4b75d1(0x11a)](_0x4b75d1(0x178));_0x1e4b58[_0x4b75d1(0x133)]=_0x4b75d1(0x14b),_0x1e4b58[_0x4b75d1(0x13d)][_0x4b75d1(0x106)]=_0x36dd7d['category'],_0x1e4b58[_0x4b75d1(0x107)]=_0x4b75d1(0x11b)+_0x36dd7d['link']+_0x4b75d1(0x10c)+_0x36dd7d[_0x4b75d1(0x14a)]+_0x4b75d1(0x16b)+_0x36dd7d[_0x4b75d1(0x14a)]+_0x4b75d1(0x129)+_0x36dd7d[_0x4b75d1(0x12a)]+_0x4b75d1(0x131),_0x1c8041[_0x4b75d1(0x10f)](_0x1e4b58);});}function _0x482128(_0xd5930d){const _0xb9c9e2=_0x314f49;document[_0xb9c9e2(0x162)](_0xb9c9e2(0x168))[_0xb9c9e2(0x167)](_0x5e8a6f=>{const _0x2a442d=_0xb9c9e2;_0x5e8a6f[_0x2a442d(0x112)][_0x2a442d(0x102)]=_0xd5930d===_0x2a442d(0x104)||_0x5e8a6f[_0x2a442d(0x13d)][_0x2a442d(0x106)]===_0xd5930d?_0x2a442d(0x175):_0x2a442d(0x121);}),document['querySelectorAll']('.flyer-item')[_0xb9c9e2(0x167)](_0x5be9df=>{const _0x4e024f=_0xb9c9e2;_0x5be9df['style'][_0x4e024f(0x102)]=_0xd5930d==='all'||_0x5be9df[_0x4e024f(0x13d)][_0x4e024f(0x106)]===_0xd5930d?_0x4e024f(0x15a):'none';});const _0x33b921=document[_0xb9c9e2(0x173)]('.filterable-section[data-category=\x22flyers\x22]');if(_0x33b921){const _0x45ed10=document[_0xb9c9e2(0x173)](_0xb9c9e2(0x150));_0x33b921[_0xb9c9e2(0x112)]['display']=_0x45ed10?_0xb9c9e2(0x175):'none';}}_0x1ddb67[_0x314f49(0x167)](_0x16fbe6=>{const _0x3b9a45=_0x314f49;_0x16fbe6[_0x3b9a45(0x155)](_0x3b9a45(0x108),()=>{const _0xc0f5d=_0x3b9a45;_0x1ddb67['forEach'](_0x4c15ca=>_0x4c15ca['classList'][_0xc0f5d(0x143)](_0xc0f5d(0x15d))),_0x16fbe6[_0xc0f5d(0x163)]['add'](_0xc0f5d(0x15d)),_0x482128(_0x16fbe6[_0xc0f5d(0x13d)][_0xc0f5d(0x140)]);});}),_0x3420f0[_0x314f49(0x155)](_0x314f49(0x108),_0x5b948a=>{const _0x74d3ad=_0x314f49,_0x2abd32=_0x5b948a['target'][_0x74d3ad(0x117)]('.copy-link');if(_0x2abd32){const _0x25a84f=_0x2abd32[_0x74d3ad(0x173)](_0x74d3ad(0x152)),_0x2cbc2e=_0x2abd32[_0x74d3ad(0x173)]('span');_0x25a84f['select'](),document[_0x74d3ad(0x144)](_0x74d3ad(0x16f)),_0x2cbc2e[_0x74d3ad(0x14c)]='Copied!',setTimeout(()=>{const _0x327e61=_0x74d3ad;_0x2cbc2e[_0x327e61(0x14c)]='Copy\x20Link';},0x7d0);}(_0x5b948a['target'][_0x74d3ad(0x163)][_0x74d3ad(0x13e)]('preview-image')||_0x5b948a[_0x74d3ad(0x11f)][_0x74d3ad(0x163)][_0x74d3ad(0x13e)]('flyer-image'))&&(_0x22a406[_0x74d3ad(0x177)]=_0x5b948a[_0x74d3ad(0x11f)][_0x74d3ad(0x177)],_0x168335[_0x74d3ad(0x112)][_0x74d3ad(0x102)]=_0x74d3ad(0x15a));}),_0x5bcf2a[_0x314f49(0x155)](_0x314f49(0x108),()=>{const _0x58cbd0=_0x314f49;_0x168335[_0x58cbd0(0x112)][_0x58cbd0(0x102)]=_0x58cbd0(0x121);}),_0x168335['addEventListener'](_0x314f49(0x108),_0x3417ae=>{const _0x52c282=_0x314f49;_0x3417ae['target']===_0x168335&&(_0x168335[_0x52c282(0x112)][_0x52c282(0x102)]=_0x52c282(0x121));}),_0x3fac87(),_0x1eab1e(),_0x482128(_0x314f49(0x104));}));
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- YOUR INTERIOR DATA ---
+    const interiorData = {
+        trailer: [
+            { name: "BEACH", link: "https://r2.fivemanage.com/image/Dh7wCYUuil8q.png", note: "$10K Fee" },
+            { name: "JAMES", link: "https://r2.fivemanage.com/image/ZOb4shuIe7GZ.png", note: "$10K Fee" },
+            { name: "SANDY", link: "https://r2.fivemanage.com/image/lVpHgPm0Bs96.png", note: "$7K Fee" },
+            { name: "SOPOR", link: "https://r2.fivemanage.com/image/Eact22zPXMS6.png", note: "$10K Fee (Trailer MUST be grounded & a double wide)" }
+        ],
+        apartment: [
+            { name: "ALTA", link: "https://r2.fivemanage.com/image/Yyixf8fYXkPV.png", note: "$10K Fee" },
+            { name: "BEACH", link: "https://r2.fivemanage.com/image/Dh7wCYUuil8q.png", note: "$10K Fee" },
+            { name: "CYPRESS", link: "https://r2.fivemanage.com/image/U2owXIRlu7l4.png", note: "$10K Fee" },
+            { name: "FRESCO", link: "https://r2.fivemanage.com/image/xv3eb3GLyDwM.png", note: "$10K Fee" },
+            { name: "GULF", link: "https://r2.fivemanage.com/image/XLVcczphFWuu.png", note: "$10K Fee" },
+            { name: "JAMES", link: "https://r2.fivemanage.com/image/ZOb4shuIe7GZ.png", note: "$10K Fee" },
+            { name: "MONET", link: "https://r2.fivemanage.com/image/bAUCikzX7QzF.png", note: "$10K Fee" },
+            { name: "RETRO", link: "https://r2.fivemanage.com/image/3zmhO8ibrjny.png", note: "$10K Fee" }
+        ],
+        house: [
+            { name: "AQUATIC", link: "https://r2.fivemanage.com/image/AZovjdudUUsj.png", note: "$13K Fee" },
+            { name: "AVENGER", link: "https://r2.fivemanage.com/image/nvYqgUePs2s6.png", note: "$13K Fee" },
+            { name: "BUNGALOW", link: "https://r2.fivemanage.com/image/3mL4NrY2ry0Q.png", note: "$13K Fee" },
+            { name: "CLINTON", link: "https://r2.fivemanage.com/image/sAXTIFK6hZpw.png", note: "$5K Fee" },
+            { name: "JAMES", link: "https://r2.fivemanage.com/image/ZOb4shuIe7GZ.png", note: "$10K Fee" },
+            { name: "RETRO", link: "https://r2.fivemanage.com/image/3zmhO8ibrjny.png", note: "$10K Fee" },
+            { name: "SOPOR", link: "https://r2.fivemanage.com/image/Eact22zPXMS6.png", note: "$10K Fee" },
+            { name: "SUBTERRA", link: "https://r2.fivemanage.com/image/8In3guaF8yAV.png", note: "$13K Fee" },
+            { name: "TERRA-COTTA", link: "https://r2.fivemanage.com/image/VBsdm1EYucR3.png", note: "$13K Fee" }
+        ],
+        "house-plus": [
+            { name: "SAVOY", link: "https://r2.fivemanage.com/image/vt0vrFWGt48G.png", note: "$20K Fee" },
+            { name: "VILLA", link: "https://r2.fivemanage.com/image/VGxsIVVtZU92.png", note: "$20K Fee" }
+        ],
+        mansion: [
+            { name: "ECLIPSE", link: "https://r2.fivemanage.com/image/qgHf4UchMEdS.png", note: "$20K Fee" },
+            { name: "RANCHER", link: "https://r2.fivemanage.com/image/FmXB0lraeo2h.png", note: "$20K Fee" },
+            { name: "SAVOY", link: "https://r2.fivemanage.com/image/vt0vrFWGt48G.png", note: "$20K Fee" },
+            { name: "TINSEL", link: "https://r2.fivemanage.com/image/XbKJ96HhhKXc.png", note: "$20K Fee" },
+            { name: "VILLA", link: "https://r2.fivemanage.com/image/VGxsIVVtZU92.png", note: "$20K Fee" },
+        ],
+        premiumMansions: [
+            {name: "Hawthorne", note: "$500K Fee", link: "https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/6.png"},
+            {name: "Inglewood", note: "$750K Fee", link: "https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/Mansions.png"},
+            {name: "Jasmine", note: "$750 Fee", link: "https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/8.png"},
+        ],
+        warehouse: [
+            {name: "Warehouses", link: "https://r2.fivemanage.com/image/PnTRStaSNRTE.png"},
+        ]
+    };
+
+    const flyerData = [
+        { title: "Master Trailer Interiors", link: "https://r2.fivemanage.com/image/EVYHbdTblF21.png", category: "trailer" },
+        { title: "Master Apartment Interiors", link: "https://r2.fivemanage.com/image/dGX4XpTEE5l9.png", category: "apartment" },
+        { title: "Master House Interiors", link: "https://r2.fivemanage.com/image/HRMqPtywCW4D.png", category: "house", },
+        { title: "Master Mansion Interiors", link: "https://r2.fivemanage.com/image/U0r9clNOQkC7.png", category: "mansion", },
+        { title: "Master Premium Mansions Interiors", link: "https://r2.fivemanage.com/KzEWs4Qe9U9yOYTmCUG7d/MansionsMaster.png", category: "Mansions", },
+        { title: "Warehouses", link: "https://r2.fivemanage.com/image/PnTRStaSNRTE.png", category: "warehouse"},
+        { title: "Dynasty 8 Realtor", link: "https://i.gyazo.com/adeeb65f716270b431076b7be024320d.png "},
+    ];
+
+    const interiorsContainer = document.getElementById('interiors-list-container');
+    const flyersContainer = document.getElementById('flyers-container');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const contentBlock = document.querySelector('.content-block');
+
+    function renderInteriors() {
+        interiorsContainer.innerHTML = '';
+        for (const categoryId in interiorData) {
+            const categoryData = interiorData[categoryId];
+            
+            const categoryDiv = document.createElement('div');
+            // This class is used by the filter function
+            categoryDiv.className = 'interior-category'; 
+            categoryDiv.dataset.category = categoryId;
+
+            const categoryTitle = {
+                trailer: "Trailer Interiors", apartment: "Apartment Interiors",
+                house: "House Interiors", "house-plus": "House Interiors (600k+)",
+                mansion: "Mansion Interiors", premiumMansions: "Premium Mansion Interiors",
+                warehouse: "Warehouse Interiors"
+            }[categoryId];
+
+            let interiorsHTML = `<h2>${categoryTitle}</h2><div class="interior-grid">`;
+            categoryData.forEach(interior => {
+                const noteHTML = interior.note ? `<small class="interior-note">${interior.note}</small>` : '';
+                // *** FIX: Reverted to the simpler, working HTML structure for each item ***
+                interiorsHTML += `
+                    <div class="interior-item">
+                        <div class="interior-preview">
+                            <img src="${interior.link}" alt="${interior.name}" class="preview-image" loading="lazy" title="Click to enlarge">
+                        </div>
+                        <div class="interior-details">
+                            <span class="interior-name">${interior.name}</span>
+                            ${noteHTML}
+                        </div>                        
+                        <div class="copy-link" title="Click to copy link">
+                            <input type="text" value="${interior.link}" readonly>
+                            <span>Copy Link</span>
+                        </div>
+                    </div>
+                `;
+            });
+            interiorsHTML += `</div>`;
+            categoryDiv.innerHTML = interiorsHTML;
+            interiorsContainer.appendChild(categoryDiv);
+        }
+    }
+
+    function renderFlyers() {
+        if (!flyersContainer) return;
+        flyersContainer.innerHTML = '';
+        flyerData.forEach(flyer => {
+            const flyerElement = document.createElement('div');
+            flyerElement.className = 'flyer-item';
+            // Add data-category to the flyer item itself for filtering
+            flyerElement.dataset.category = flyer.category;
+            flyerElement.innerHTML = `
+                <div class="flyer-preview">
+                    <img src="${flyer.link}" alt="${flyer.title}" class="flyer-image" loading="lazy" title="Click to enlarge">
+                </div>
+                <h3>${flyer.title}</h3>
+                <div class="copy-link" title="Click to copy link">
+                    <input type="text" value="${flyer.link}" readonly>
+                    <span>Copy Link</span>
+                </div>
+            `;
+            flyersContainer.appendChild(flyerElement);
+        });
+    }
+
+    function filterContent(filter) {
+        // Filter the interior categories
+        document.querySelectorAll('.interior-category').forEach(cat => {
+            cat.style.display = (filter === 'all' || cat.dataset.category === filter) ? 'block' : 'none';
+        });
+
+        // Filter the individual flyers
+        document.querySelectorAll('.flyer-item').forEach(flyer => {
+            flyer.style.display = (filter === 'all' || flyer.dataset.category === filter) ? 'flex' : 'none';
+        });
+
+        // Show/hide the main "Flyers" H1 title and HR line
+        const flyerSection = document.querySelector('.filterable-section[data-category="flyers"]');
+        if (flyerSection) {
+            // Check if ANY flyers are visible after filtering
+            const anyFlyersVisible = document.querySelector('.flyer-item[style*="display: flex"]');
+            // Hide the entire section if no flyers are visible, show it if at least one is
+            flyerSection.style.display = anyFlyersVisible ? 'block' : 'none';
+        }
+    }
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            filterContent(button.dataset.filter);
+        });
+    });
+
+    contentBlock.addEventListener('click', e => {
+        const copyDiv = e.target.closest('.copy-link');
+        if (copyDiv) {
+            const input = copyDiv.querySelector('input');
+            const span = copyDiv.querySelector('span');
+            input.select();
+            document.execCommand('copy');
+            span.textContent = 'Copied!';
+            setTimeout(() => { span.textContent = 'Copy Link'; }, 2000);
+        }
+
+        if (e.target.classList.contains('preview-image') || e.target.classList.contains('flyer-image')) {
+            lightboxImage.src = e.target.src;
+            lightboxOverlay.style.display = 'flex';
+        }
+    });
+    
+    lightboxClose.addEventListener('click', () => { lightboxOverlay.style.display = 'none'; });
+    lightboxOverlay.addEventListener('click', e => { if (e.target === lightboxOverlay) { lightboxOverlay.style.display = 'none'; } });
+
+    renderInteriors();
+    renderFlyers();
+    // Run the filter once on load to respect the default 'All' button
+    filterContent('all');
+});
