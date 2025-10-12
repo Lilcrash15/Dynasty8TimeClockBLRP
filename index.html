@@ -9,34 +9,20 @@
     <!-- START: Firebase SDK and Configuration -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { 
-            getFirestore, collection, addDoc, getDocs, doc, updateDoc, 
-            query, where, orderBy, serverTimestamp, Timestamp, getDoc 
-        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        // *** FIX 1: Added 'deleteDoc' to the import list ***
+        import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp, Timestamp, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
         
-        const firebaseConfig = {
-          apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30",
-          authDomain: "dynasty8-timeclock.firebaseapp.com",
-          projectId: "dynasty8-timeclock",
-          storageBucket: "dynasty8-timeclock.firebasestorage.app",
-          messagingSenderId: "671469314165",
-          appId: "1:671469314165:web:70aea0e31168f20a7c983c",
-          measurementId: "G-2Z5B0VKG7F"
-        };
-
+        const firebaseConfig = { apiKey: "AIzaSyB3xqembB2zf6FcFf168tL4GEWCp6-xy30", authDomain: "dynasty8-timeclock.firebaseapp.com", projectId: "dynasty8-timeclock", storageBucket: "dynasty8-timeclock.firebasestorage.app", messagingSenderId: "671469314165", appId: "1:671469314165:web:70aea0e31168f20a7c983c", measurementId: "G-2Z5B0VKG7F" };
+    
         try {
             console.log("Attempting Firebase initialization for:", document.title);
             const app = initializeApp(firebaseConfig);
             window.db = getFirestore(app);
-            window.firestoreFunctions = {
-                collection, addDoc, getDocs, doc, updateDoc, query, where, orderBy,
-                serverTimestamp, Timestamp, getDoc
-            };
+            // *** FIX 2: Added 'deleteDoc' to the list of functions passed to main.js ***
+            window.firestoreFunctions = { collection, addDoc, getDocs, doc, updateDoc, deleteDoc, query, where, orderBy, serverTimestamp, Timestamp, getDoc };
             window.isFirebaseReady = true; 
             console.log("Firebase initialized successfully for:", document.title);
-            const firebaseReadyEvent = new CustomEvent('firebaseReady', {
-                detail: { db: window.db, functions: window.firestoreFunctions }
-            });
+            const firebaseReadyEvent = new CustomEvent('firebaseReady', { detail: { db: window.db, functions: window.firestoreFunctions } });
             document.dispatchEvent(firebaseReadyEvent);
         } catch (error) {
             window.isFirebaseReady = false; 
@@ -65,6 +51,7 @@
             </button>
             <div class="dropdown-content">
                 <a href="index.html">Time Clock</a>
+                <a href="ads.html">Sky Ads</a>
                 <a href="manager.html">Leadership Portal</a>
                 <a href="interiors.html">Interior Gallery</a>
                 <a href="sop.html">SOP Document</a>
@@ -125,6 +112,26 @@
             <p><i>Select your name to see your recent entries.</i></p>
         </div>
     </div>
+
+    <!-- START: NEW PERSONAL ADS SECTION -->
+    <div id="personal-ads-section">
+    <hr>
+    <h2>My Personal Ads</h2>
+    <form id="personal-ad-form">
+        <div class="form-group">
+            <label for="ad-content">New Ad Content:</label>
+            <textarea id="ad-content" rows="3" placeholder="Enter your ad here..." required></textarea>
+        </div>
+        <button type="submit" id="post-ad-btn" class="action-button">Post Ad</button>
+    </form>
+    <p id="ad-status-message" class="success-message"></p>
+    
+    <h3 class="subsection-title">Your Active Ads</h3>
+    <div id="my-ads-display" class="log-container">
+        <p><i>Your posted ads will appear here.</i></p>
+    </div>
+</div>
+<!-- END: NEW PERSONAL ADS SECTION -->
     
     <div id="commission-calculator-section" class="content-block" style="margin-top: 30px; background-color: transparent; border: none; padding: 0;">
         <div class="collapsible-header">

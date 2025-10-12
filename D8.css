@@ -780,3 +780,77 @@ input[type=number] {
     border-radius: 8px;
     margin: 0 auto;
 }
+
+/* REPLACE the entire Personal Ads Section Styles block in D8.css */
+
+/* --- Personal Ads Section Styles --- */
+
+#personal-ads-section .subsection-title {
+    text-align: left;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #ccc;
+    border: none; /* Remove any inherited borders */
+    padding-bottom: 0; /* Remove inherited padding */
+}
+
+/* 
+  The .ad-item uses .employee-item for its base structure (flexbox, border, padding).
+  This ensures it matches the look of other lists on the site.
+*/
+.ad-item {
+    align-items: center; /* Vertically center the content and buttons */
+    flex-wrap: wrap; 
+}
+
+.ad-details {
+    flex-grow: 1; /* Allows text to take up available space */
+    text-align: left;
+    word-break: break-word; 
+    padding-right: 15px; /* Space between text and buttons */
+}
+
+.ad-content {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+.ad-details small {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.ad-actions {
+    display: flex;
+    gap: 8px; /* Space between buttons */
+    flex-shrink: 0; /* Prevents buttons from shrinking */
+    margin-left: auto; /* Pushes the buttons to the far right */
+}
+
+.ad-actions button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin-left: 0; /* Override any inherited margins */
+}
+/* This adds the textarea to the main group of styled form elements */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #1a1a1d;
+    color: #f0f0f0;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* This adds specific behaviors for textareas, like resizing */
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
